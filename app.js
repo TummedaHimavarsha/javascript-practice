@@ -1,106 +1,38 @@
-// function declaration
-
-function data(){
-    console.log("hi hello");
-}
-data()
-
-
-// function expression
-
-let data=function(){
-    console.log("javascript")
-}
-data()
-
-// function with parameters
-
-function data(a,b){
-    console.log(`operation: ${a}+${b}=${a+b}`)
-}
-data(10,20)
-
-
-// function without parameters
-
-let data=function(){
-    console.log("i love javascropt")
-}
-data()
-
-
-// function with return
-
-function data(a,b){
-    c=a+b
-    return c
-}
-console.log(data(1,2))
-
-
-// function without return 
-
-function data(){
-    console.log("Hi This is HimaVarsha")
-}
-data()
-
-
-// method object
-
-let human={
-    name:"HimaVarsha",
-    age:21,
-    data:function (){
-        console.log(`hi HimaVarsha age is ${this.age}`)
+let arr1=["pinky@gmail.com","jyo@gmail.com","sweety@gmail.com","chinnu@gmail.com","supriya@gmail.com"]
+for (let i in arr1){
+     if (i>2){
+        break
     }
+        console.log(arr1[i])
 }
-    console.log(human.data())
 
 
-// arrow functions
-let data=()=>{
-    console.log("Namaste")
+let arr=["pinky@gmail.com","jyo@gmail.com","sweety@gmail.com","chinnu@gmail.com","supriya@gmail.com"]
+for (let i in arr){
+    console.log(arr[i])
 }
-data()
 
 
-// high order and call back function
-
-function data(hi){
-    console.log("higher order")
-    hi();
-    console.log("function")
-
+let a=2
+for (let i=1;i<=10;i++){
+    let c=a*i
+    console.log(`${a}*${i}=${c}`)
 }
-function data1(){
-    console.log("call back function")
-}
-data(data1)
 
-
-// ananymous functions
-
-let data=function(){
-    console.log("functions without name")
-}
-data()
-
-// iife function
-
-(function(){
-    console.log("immediately invoke function expression")
-})
-()
-
-// recursive function
-
-function factorial(i){
-        if(i==1){
-            return 1;
+function num(){
+    for (let i=1;i<=100;i++){
+        if (i%3==0 && i%5==0){
+            console.log(i,"FizzBuzz")
+        }
+        else if (i%3==0){
+            console.log(i,"Fizz")
+        }
+        else if(i%5==0){
+            console.log(i,"Buzz")
         }
         else{
-            return i*factorial(i-1);
+            console.log(i)
         }
+    }
 }
-console.log(factorial(4))
+num()
